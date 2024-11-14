@@ -1,16 +1,18 @@
 export const users = [
   {
-    id: 1,
+    id: 123,
     name: "John",
-    email: "XXXXXXXXXXXXXX",
+    email: "John@gmail.com",
     password: "123456",
+    img: "https://randomuser.me/api/portraits/men/21.jpg",
     role: "admin",
   },
   {
-    id: 2,
+    id: 4000,
     name: "Jane",
-    email: "XXXXXXXXXXXXXX",
+    email: "Jane@gmail.com",
     password: "123456",
+    img: "https://randomuser.me/api/portraits/women/21.jpg",
     role: "user",
   },
 ];

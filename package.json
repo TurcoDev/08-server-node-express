@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.mjs",
     "dev2": "node --watch server.mjs",
-    "dev:express": "node --watch app.js"
+    "dev:express": "node --watch app.js",
+    "dev:ex2": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
