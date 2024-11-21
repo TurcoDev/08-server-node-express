@@ -7,10 +7,10 @@ const port = 3000
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.json(users)
+  res.send(html)
 })
 
-app.post('/', (req, res) => {
+app.post('/user', (req, res) => {
   const newUser = req.body;
   // const newUser = {
   //   id: 3,
@@ -23,8 +23,19 @@ app.post('/', (req, res) => {
   res.send('El usuario se ha agregado correctamente')
 })
 
-app.get('/user', (req, res) => {
-  res.send(html)
+app.get('/users', (req, res) => {
+  res.json(users)
+})
+
+app.get('/user/:id', (req, res) => {
+  const userId = req.params.id;
+  const user = users.find(user => user.id === parseInt(userId));
+  if (!user) {
+    return res.status(404).send('User not found')
+  }
+  console.log(user);
+  res.json(user)
+  // res.send(`Got a USER request at /user ${user}`)
 })
 
 app.delete('/user/:id', (req, res) => {
